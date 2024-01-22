@@ -1,26 +1,30 @@
 import React from "react";
 import Button from "./Button"
-import Icon from "../Icon/Index"
+import IconComponent from "../Icon/Index"
 
 type ButtonProps = {
-  label?: string;
-  buttonBgColor: string;
-  buttonColor: string;
-  children: string;
-  iconName: string;
-  iconColor: string;
-  iconSize: number;
+    label?: string;
+    buttonSize?: string;
+    buttonBgColor: string;
+    buttonColor: string;
+    children: string;
+    url?: string;
+    iconName: string;
+    iconColor: string;
+    iconSize?: string;
+    iconIsRight?: boolean
 }
 
 class IconButton extends React.Component<ButtonProps> {
-   render() {
-       return (
-           <Button buttonBgColor={this.props.buttonBgColor} buttonColor={this.props.buttonColor}>
-               <Icon iconName={this.props.iconName} color={this.props.iconColor} size={this.props.iconSize} />
-               {this.props.children}
-           </Button>
-       );
-   }
+    render() {
+        const { buttonSize, buttonBgColor, buttonColor, url, ...otherProps } = this.props;
+        const className = `gap-2 items-center ${buttonBgColor} ${buttonColor}`;
+        return (
+            <Button url={url} buttonSize={buttonSize} buttonBgColor={buttonBgColor} buttonColor={buttonColor} className={className}>
+                <IconComponent {...otherProps} />
+                {this.props.children}
+            </Button>
+        );
+    }
 }
-
 export default IconButton;

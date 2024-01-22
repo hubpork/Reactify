@@ -1,18 +1,33 @@
 import React from 'react';
+import clsx from 'clsx';
+import * as FaIcons from 'react-icons/fa';
+import * as IoIcons from 'react-icons/io';
+
+const iconsMapping: { [key: string]: React.ElementType } = {
+    ...FaIcons,
+    ...IoIcons,
+    // Add more libraries as needed
+};
 
 interface IconProps {
  iconName: string;
- color?: string;
- size?: number;
+ iconColor?: string;
+ iconSize?: string;
+ iconIsRight?: boolean
 }
 
-class Icon extends React.Component<IconProps> {
+/*
+    The iconColor prop in your IconComponent is being interpreted as a string literal, not as a variable. 
+    That's why it's not being recognized as a Tailwind CSS class.
+*/
+
+class IconComponent extends React.Component<IconProps> {
     render() {
-        const { iconName, color, size } = this.props;
-        return (
-            <i className={`fa ${iconName}`} style={{color, fontSize: size}}></i>
-        );
+        const { iconName, iconColor, iconSize, iconIsRight } = this.props;
+        const Icon = iconsMapping[iconName];
+        const className = clsx(`${iconColor} ${iconSize} ${iconIsRight ? 'order-2' : ''}`);
+        return <Icon className={className} />;
     }
 }
 
-export default Icon; 
+export default IconComponent;

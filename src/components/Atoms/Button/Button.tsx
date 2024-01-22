@@ -1,19 +1,42 @@
 import React from "react";
 
 type ButtonProps = {
-    buttonBgColor: string;
+    buttonSize?: string;
+    buttonBgColor?: string;
     buttonColor: string;
     children?: React.ReactNode;
+    className?: string;
+    url?: string;
+}
+
+function sayHello() {
+    alert('You clicked me!');
 }
 
 class Button extends React.Component<ButtonProps> {
-   render() {
-       return (
-           <button className={`px-4 py-2 inline-flex gap-2 rounded mr-auto mt-auto ${this.props.buttonBgColor} ${this.props.buttonColor}`}>
-               {this.props.children}
-           </button>
-       );
-   }
+    render() {
+        const { buttonSize, buttonBgColor, buttonColor, children, className, url } = this.props;
+        const finalClassName = `inline-flex gap-2 rounded font-medium ${buttonSize ? buttonSize : 'px-4 py-2'} ${buttonBgColor ? buttonBgColor : 'bg-primary-700 hover:bg-primary-600'} ${buttonColor ? buttonColor : 'text-white'} ${className ? className : ''}`;
+        let buttonElement;
+        if (url) {
+            buttonElement = (
+                <a href={url}>
+                    <button className={finalClassName}>
+                        {children}
+                    </button>
+                </a>
+            );
+        } else {
+            buttonElement = (
+                <button className={finalClassName} onClick={sayHello}>
+                    {children}
+                </button>
+            );
+        }
+
+        return buttonElement;
+    }
 }
 
 export default Button;
+
