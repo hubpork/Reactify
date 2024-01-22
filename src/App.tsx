@@ -1,33 +1,25 @@
-import BlogItems from './components/Blog/BlogItems'
-import { Button } from 'primereact/button'
-import { FaBeer } from 'react-icons/fa'
-         
+// Main.js
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
-  return (
-		<>
+	return (
+		<Router>
 			<div className="bg-gray-900 text-white py-6">
 				<nav className="container px-4">
 					<ul className='flex gap-4'>
-						<li>Home</li>
-						<li>Blog</li>
+						<li><Link to="/">Home</Link></li>
+						<li><Link to="/about">About</Link></li>
 					</ul>
 				</nav>
 			</div>
-			<main className="container px-4">
-				<BlogItems />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+			</Routes>
+		</Router>
+	);
+}
 
-				<Button 
-					label="Submit"
-					pt={{
-						root: { className: 'bg-blue-500 border-blue-500' }
-					}}
-				>
-					<FaBeer />
-				</Button>
-
-			</main>
-		</>
-	)
- }
- export default App
+export default App;

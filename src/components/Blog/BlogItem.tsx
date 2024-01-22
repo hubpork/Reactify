@@ -20,10 +20,12 @@ class BlogItem extends React.Component<BlogItemProps> {
                                 image={image}
                             />
                             <div className="details flex flex-col gap-2">
-                                <h2 className='text-xl font-semibold'>{title}</h2>
-                                <p>{author}</p>
+                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white m-0">{title}</h2>
+                                <div className="text-base editor">
+                                    <p>{author}</p>
+                                </div>
                                 {button && (
-                                    <div className="btn-wrap">
+                                    <div className="btn-wrap my-5">
                                         <PrimeButtonIcon 
                                             {...button}
                                         />
