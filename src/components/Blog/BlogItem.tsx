@@ -1,7 +1,7 @@
 import React from "react";
 import blogData from './blog.json'
 import Image from '../Atoms/Image/Index';
-import IconButton from '../Atoms/Button/IconButton';
+import PrimeButtonIcon from "../Atoms/PrimeButton/ButtonIcon";
 
 type BlogItemProps = {
  title?: string;
@@ -24,7 +24,7 @@ class BlogItem extends React.Component<BlogItemProps> {
                                 <p>{author}</p>
                                 {button && (
                                     <div className="btn-wrap">
-                                        <IconButton
+                                        <PrimeButtonIcon 
                                             {...button}
                                         />
                                     </div>

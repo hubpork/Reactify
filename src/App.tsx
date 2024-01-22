@@ -1,4 +1,7 @@
 import BlogItems from './components/Blog/BlogItems'
+import { Button } from 'primereact/button'
+import { FaBeer } from 'react-icons/fa'
+         
 
 function App() {
   return (
@@ -13,6 +16,16 @@ function App() {
 			</div>
 			<main className="container px-4">
 				<BlogItems />
+
+				<Button 
+					label="Submit"
+					pt={{
+						root: { className: 'bg-blue-500 border-blue-500' }
+					}}
+				>
+					<FaBeer />
+				</Button>
+
 			</main>
 		</>
 	)

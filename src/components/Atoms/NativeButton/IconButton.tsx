@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "./Button"
+import NativeButton from "./Button"
 import IconComponent from "../Icon/Index"
 
-type ButtonProps = {
+type NativeButtonIconProps = {
     label?: string;
     buttonSize?: string;
     buttonBgColor: string;
@@ -15,16 +15,16 @@ type ButtonProps = {
     iconIsRight?: boolean
 }
 
-class IconButton extends React.Component<ButtonProps> {
+class NativeButtonIconButton extends React.Component<NativeButtonIconProps> {
     render() {
         const { buttonSize, buttonBgColor, buttonColor, url, ...otherProps } = this.props;
-        const className = `gap-2 items-center ${buttonBgColor} ${buttonColor}`;
+        const extendClassName = `gap-2 items-center ${buttonBgColor} ${buttonColor}`;
         return (
-            <Button url={url} buttonSize={buttonSize} buttonBgColor={buttonBgColor} buttonColor={buttonColor} className={className}>
+            <NativeButton url={url} buttonSize={buttonSize} buttonBgColor={buttonBgColor} buttonColor={buttonColor} extendClassName={extendClassName}>
                 <IconComponent {...otherProps} />
                 {this.props.children}
-            </Button>
+            </NativeButton>
         );
     }
 }
-export default IconButton;
+export default NativeButtonIconButton;

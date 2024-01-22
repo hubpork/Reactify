@@ -25,7 +25,7 @@ class IconComponent extends React.Component<IconProps> {
     render() {
         const { iconName, iconColor, iconSize, iconIsRight } = this.props;
         const Icon = iconsMapping[iconName];
-        const className = clsx(`${iconColor} ${iconSize} ${iconIsRight ? 'order-2' : ''}`);
+        const className = clsx(`${iconColor} ${iconSize} ${iconIsRight ? 'order-2' : 'order-first'}`);
         return <Icon className={className} />;
     }
 }
