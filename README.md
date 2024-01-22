@@ -3,7 +3,7 @@
 ![image info](./public/start.png)
 
 
-## install Project Reactify
+## install and run Project Reactify
     npm install
     npm run watch
 
@@ -26,26 +26,26 @@ navigate to tailwind.config.cjs =>
 
     /** @type {import('tailwindcss').Config} */
     export default {
-	    content: [
-		    "./src/**/*.{js,jsx,ts,tsx}",
-	    ],
-	    theme: {
-		    fontFamily: {
-			    sans: ['"Inter"', 'sans-serif']
-		    },
-		    extend: {
-			    colors: {
-				    primary: {
-					    700: '#bf0d0d',
-				    },
-					  secondary: {
-					    600: '#1f2a37'
-				    },
-				},
-			},
-	    },
-	    plugins: [],
-    }
+      content: [
+        "./src/**/*.{js,jsx,ts,tsx}",
+      ],
+      theme: {
+        fontFamily: {
+          sans: ['"Inter"', 'sans-serif']
+        },
+        extend: {
+          colors: {
+            primary: {
+              700: '#bf0d0d',
+            },
+            secondary: {
+              600: '#1f2a37'
+            },
+        },
+      },
+    },
+    plugins: [],
+  }
 
   
 
@@ -75,6 +75,6 @@ adapt script in package.json =>
 	    "watch": "concurrently \"npm:dev\" \"npm:storybook\""
     },
 
-### install concurrently
+### install primereact
     npm install primereact
 
