@@ -1,7 +1,5 @@
-
 import BlogItems from '../components/Blog/BlogItems'
-import { Button } from 'primereact/button'
-import { FaBeer } from 'react-icons/fa'
+
 
 function Home() {
 	return (
@@ -18,14 +16,6 @@ function Home() {
 
 			<BlogItems />
 
-			<Button 
-				label="Submit"
-				pt={{
-					root: { className: 'bg-blue-500 border-blue-500' }
-				}}
-			>
-				<FaBeer />
-			</Button>
 		</article>
 	);
 }

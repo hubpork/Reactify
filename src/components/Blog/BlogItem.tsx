@@ -17,7 +17,7 @@ class BlogItem extends React.Component<BlogItemProps> {
                     <li className="py-4" key={index}>
                         <div className="card flex flex-col gap-4" >
                             <Image 
-                                image={image}
+                                {...image}
                             />
                             <div className="details flex flex-col gap-2">
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white m-0">{title}</h2>

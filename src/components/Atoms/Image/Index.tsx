@@ -2,20 +2,17 @@ import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface ImageProps {
-    image: {
-        src: string;
-        alt?: string;
-        height: number;
-        width: number;
-        caption?: string;
-    }
+    src: string;
+    alt?: string;
+    height: number;
+    width: number;
+    caption?: string;
 }
  
 class Image extends React.Component<ImageProps> {
     render() {
-        const { image } = this.props;
-        const { alt, height, src, width, caption } = image;
- 
+        const { alt, height, src, width, caption } = this.props;
+
         return (
             <figure>
                 <LazyLoadImage
