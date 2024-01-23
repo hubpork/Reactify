@@ -19,7 +19,7 @@ class PrimeButton extends React.Component<PrimeButtonProps> {
         const buttonElement = (
             <Button 
                 onClick={url ? undefined : this.sayHello}
-                label= {children}
+                label={children}
                 pt={{
                     root: {className}
                 }}

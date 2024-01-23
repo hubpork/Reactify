@@ -16,16 +16,6 @@
   src: url('./fonts/inter-v13-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
-/* inter-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 /* inter-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -51,6 +41,9 @@
 @layer components {
   .large {
     @apply py-3.5 px-7 text-lg;
+  }
+  .medium {
+    @apply px-4 py-2;
   }
   .small {
     @apply py-2 px-4 text-xs;

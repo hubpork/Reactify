@@ -2,7 +2,9 @@
     {
         "id": 1,
         "title": "Building a Todo App with Vue",
+        "infotext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "author":"John Doe",
+
         "image": {
             "src": "./src/assets/photo-1550751827-4bd374c3f58b.jpg",
             "alt": "Building a Todo App with Vue",
@@ -26,6 +28,7 @@
     {
         "id": 2,
         "title": "Getting started with TypeScript",
+        "infotext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
         "author":"Claman Joe",
         "image": {
             "src": "./src/assets/photo-1670272505340-d906d8d77d03.jpg",

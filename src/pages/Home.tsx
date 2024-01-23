@@ -1,5 +1,4 @@
-import BlogItems from '../components/Blog/BlogItems'
-
+import BlogPosts from "../components/Blog/BlogPosts";
 
 function Home() {
 	return (
@@ -11,10 +10,8 @@ function Home() {
 			<div className="text-base md:text-lg lg:text-xl editor">
 				<p>This is the homepage.</p>
 			</div>
-			{/* Add more content here */}
 
-
-			<BlogItems />
+			<BlogPosts />
 
 		</article>
 	);
