@@ -13,10 +13,9 @@
             "caption": ""
         },
         "button": {
-            "buttonSize": "",
-            "buttonBgColor": "secondary",
-            "buttonColor": "",
-            "children": "Voila",
+            "size": "medium",
+            "primary": false,
+            "label": "Call to Action",
             "iconName": "FaBeer",
             "iconColor": "fill-gray-300",
             "iconSize": "",
@@ -38,10 +37,9 @@
             "caption": ""
         },
         "button": {
-            "buttonSize": "",
-            "buttonBgColor": "",
-            "buttonColor": "text-white",
-            "children": "Stars",
+            "size": "undefined",
+            "primary": true,
+            "label": "Stars",
             "iconName": "FaStar",
             "iconColor": "",
             "iconSize": "",

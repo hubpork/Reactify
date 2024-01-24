@@ -1,15 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import PrimeButton from "./Button";
+import "../../../index.css"
 
 
 const meta = {
+    //title: 'Example/Button',
     component: PrimeButton,
     parameters: {
       layout: 'centered',
     },
     tags: ['autodocs'],
     argTypes: {
-        buttonBgColor: { control: 'color' },
+      url: {
+        control: '-',
+      }
     },
 } satisfies Meta<typeof PrimeButton>;
   
@@ -18,13 +22,22 @@ const meta = {
   
   export const Primary: Story = {
     args: {
-      //primary: true,
-      children: 'Button',
+      primary: true,
+      label: 'Button',
     },
   };
   
-  export const Secondary: Story = {
+  export const Large: Story = {
     args: {
-    children: 'Button',
+      size: 'large',
+      label: 'Button',
     },
   };
+  
+  export const Small: Story = {
+    args: {
+      size: 'small',
+      label: 'Button',
+    },
+  };
+  

@@ -1,11 +1,9 @@
 import { Button } from 'primereact/button'
 import React from "react";
 type PrimeButtonProps = {
-    buttonSize?: string;
-    buttonBgColor?: string;
-    buttonColor: string;
-    children?: string;
-    extendClassName?: string;
+    size?: string;
+    primary: boolean;
+    label?: string;
     url?: string;
 }
 class PrimeButton extends React.Component<PrimeButtonProps> {
@@ -13,13 +11,13 @@ class PrimeButton extends React.Component<PrimeButtonProps> {
         alert("Hello!");
     };
     render() {
-        const { buttonSize, buttonBgColor, buttonColor, url, children } = this.props;
-        const className = `inline-flex gap-2 rounded font-medium ${buttonSize ? buttonSize : 'px-4 py-2'} ${buttonBgColor ? buttonBgColor : 'bg-primary-700 hover:bg-primary-600'} ${buttonColor ? buttonColor : 'text-white'}`;
+        const { size, url, primary, label } = this.props;
+        const className = `inline-flex gap-2 rounded font-medium ${size ? size : 'medium'} ${primary ? 'text-white bg-primary-700 hover:bg-primary-600' : 'text-white bg-secondary-600 hover:bg-gray-700'}`;
 
         const buttonElement = (
             <Button 
                 onClick={url ? undefined : this.sayHello}
-                label={children}
+                label={label}
                 pt={{
                     root: {className}
                 }}

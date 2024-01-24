@@ -11,8 +11,6 @@ type BlogPostProps = {
 
 class BlogPosts extends React.Component<BlogPostProps> {
     render() {
-
-
         const listItems = blogData.map(({ title, infotext, author, image, button }, index) =>
             <li className="py-4 flex" key={index}>
                 <div className="card flex flex-col bg-white border overflow-hidden border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" >
@@ -30,6 +28,7 @@ class BlogPosts extends React.Component<BlogPostProps> {
                                 <PrimeButtonIcon 
                                     {...button}
                                 />
+
                             </div>
                         )}
                     </div>

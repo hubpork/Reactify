@@ -3,13 +3,10 @@ import React from "react";
 import IconComponent from "../Icon/Index"
 
 type PrimeButtonIconProps = {
-    buttonSize?: string;
-    buttonBgColor?: string;
-    buttonColor: string;
-    children?: string;
-    extendClassName?: string;
+    size?: string;
+    primary: boolean;
+    label?: string;
     url?: string;
-
     iconName: string;
     iconColor?: string;
     iconSize?: string;
@@ -21,14 +18,13 @@ class PrimeButtonIcon extends React.Component<PrimeButtonIconProps> {
         alert("Hello!");
     };
     render() {
-        const { buttonSize, buttonBgColor, buttonColor, url, ...otherProps } = this.props;
-        const className = `inline-flex gap-2 rounded font-medium ${buttonSize ? buttonSize : 'px-4 py-2'} ${buttonBgColor ? buttonBgColor : 'bg-primary-700 hover:bg-primary-600'} ${buttonColor ? buttonColor : 'text-white'}`;
+        const { size, url, primary, ...otherProps } = this.props;
+        const className = `inline-flex gap-2 rounded font-medium ${size ? size : 'medium'} ${primary ? 'text-white bg-primary-700 hover:bg-primary-600' : 'text-white bg-secondary-600 hover:bg-gray-700'}`;
 
-        
         const buttonElement = (
             <Button 
                 onClick={url ? undefined : this.sayHello}
-                label= {this.props.children}
+                label= {this.props.label}
                 pt={{
                     root: {className}
                 }}
